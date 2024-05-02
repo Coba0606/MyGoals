@@ -1,9 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, TextInput, View, ScrollView, FlatList } from 'react-native';
+import { useState } from 'react'
+import { StyleSheet, Text, View, FlatList } from 'react-native';
 
 export default function App() {
   const[enteredGoalText, setEnteredGoalText]= useState('')
   const [goals, setGoals] = useState([])
+
+
   
   function handleInputGoals(enteredText){
     console.log(enteredText)
@@ -50,42 +52,38 @@ export default function App() {
  }
 
 
-const styles = StyleSheet.create({
-  container: { 
-  flex: 1, 
-  paddingTop: 50,
-  paddingHorizontal:20,
-},
-inputcontainer:{
-  flex:1,
-  flexDirection:'row',
-  justifyContent:'center',
-  alignitems:'center',
-  marginbotton:20,
-  borderbottonwidth:1,
-  borderbottonColor:'#7BC9FF',
-   },
-   btnGoals:{
-    borderRadius:20,
-    backgroundcolor: #CCCCCC
-   },
-   textinput: {
-    borderwidth:1,
-    bordercolor:'#CCCCCC',
-    width:'80%',
-    marginRight:3,
-    padding:3,
-    borderRadius:5,
-
-   }
-
-
-   }
-
-}
-
-const styles = StyleSheet.create({
+ const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 50,
+    paddingHorizontal: 20,
+  },
+  inputContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: '#7BC9FF',
+  },
+  textinput: {
+    borderWidth: 1,
+    borderColor: '#CCCCCC',
+    width: '80%',
+    marginRight: 3,
+    padding: 8,
+    borderRadius: 5,
+  },
+  goalsItem: {
+    margin: 0,
+    padding: 0,
+    borderRadius: 6,G,
+    backgroundColor: '#8576FF',
+    color: 'white',
+  },
+  goalText: {
+    color: 'white',
+  },
 });
-
 
 
